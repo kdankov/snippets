@@ -1,0 +1,3 @@
+# snipMate Snippets
+
+My snippets!
