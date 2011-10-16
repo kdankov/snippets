@@ -1,0 +1,278 @@
+#
+# Display
+# -----------------------------------------------
+snippet d
+	display: ${1:none}
+snippet dn
+	display: none
+snippet di
+	display: inline
+snippet db
+	display: block
+snippet dib
+	display: inline-block${1}
+
+	.ie7 &
+		zoom: 1
+		display: inline
+
+#
+# Dimentions
+# -----------------------------------------------
+snippet h
+	height: ${1}px
+snippet w
+	width: ${1}px
+snippet mah
+	max-height: ${1}px
+snippet maw
+	max-width: ${1}px
+snippet mt
+	margin-top: ${1}px
+snippet mr
+	margin-right: ${1}px
+snippet mb
+	margin-bottom: ${1}px
+snippet ml
+	margin-left: ${1}px
+snippet ma
+	margin: ${1}px
+snippet mn
+	margin: none
+snippet m+
+	margin:
+		top: ${1}px
+		right: ${2}px
+		bottom: ${3}px
+		left: ${4}px
+snippet pt
+	padding-top: ${1}px
+snippet pr
+	padding-right: ${1}px
+snippet pb
+	padding-bottom: ${1}px
+snippet pl
+	padding-left: ${1}px
+snippet pa
+	padding: ${1}px
+snippet pn
+	padding: none
+snippet p+
+	padding:
+		top: ${1}px
+		right: ${2}px
+		bottom: ${3}px
+		left: ${4}px
+
+#
+# Position & Layout
+# -----------------------------------------------
+snippet p
+	position: ${1:relative}
+snippet rel
+	position: relative
+snippet abs
+	position: absolute
+snippet t
+	top: ${1}px
+snippet r
+	right: ${1}px
+	${2}
+snippet b
+	bottom: ${1}px
+snippet l
+	left: ${1}px
+snippet f
+	float: ${1:none}
+snippet fl
+	float: left
+snippet fn
+	float: none
+snippet fr
+	float: right
+
+#
+# Fonts & Text
+# -----------------------------------------------
+snippet font
+	+font(${1:family},${2:filename})
+snippet ff
+	font-family: ${1:MuseoSans}
+snippet f+
+	font:
+		family: ${1:MuseoSans}
+		size: ${2}px
+		weight: ${3:bold}
+snippet fw
+	font-weight: ${1:bold}
+snippet fwb
+	font-weight: bold
+snippet fwn
+	font-weight: normal
+snippet fs
+	font-size: ${1:12px}
+snippet f+
+	font:
+		weight: ${1:bold}
+		size: ${2:12px}
+snippet flh
+	font-size: ${1:12px}
+	line-height: ${2:18px}
+snippet lh
+	line-height: ${1}px
+snippet ls
+	list-style: ${1:none}
+snippet lsn
+	list-style: none
+snippet tt
+	text-transform: ${1:uppercase}
+snippet ttc
+	text-transform: capitalize
+snippet ttl
+	text-transform: lowercase
+snippet ttu
+	text-transform: uppercase
+snippet text+
+	text:
+		align: ${1:left}
+		decoration: ${2:none}
+		indent: ${3}px
+		transform: ${4:uppercase}
+snippet ta
+	text-align: ${1:left}
+snippet tac
+	text-align: center
+snippet tal
+	text-align: left
+snippet tar
+	text-align: right
+snippet td
+	text-decoration: ${1:none}
+snippet tds
+	text-decoration: line-through
+snippet tdn
+	text-decoration: none
+snippet tdu
+	text-decoration: underline
+snippet ti
+	text-indent: ${1}px
+snippet ti-
+	text-indent: -9999px
+
+#
+# Padding & Margin
+# -----------------------------------------------
+
+#
+# Background & Color
+# -----------------------------------------------
+snippet lg
+	+background-image(linear-gradient(${1:center} ${2:top}, ${3:rgba(255,255,255,1)} ${4:rgba(0,0,0,1)}))
+snippet rg
+	+background-image(radial-gradient(${1:center} ${2:center}, ${3:circle} ${4:cover}, ${5:rgba(255,255,255,1)} ${6:rgba(0,0,0,1)}))
+snippet bg
+	background:
+		${1:color}: ${2:white}
+snippet bgc
+	background:
+		color: ${1:white}
+snippet bgi
+	background:
+		image: image-url('${1:filename.png}')
+		repeat: none
+snippet bgir
+	background:
+		image: image-url('${1:filename.png}')
+snippet bgix
+	background:
+		image: image-url('${1:filename.png}')
+		repeat: repeat-x
+snippet bgiy
+	background:
+		image: image-url('${1:filename.png}')
+		repeat: repeat-y
+
+#
+# Borders
+# -----------------------------------------------
+snippet bra
+	+border-radius(${1}px)
+snippet br+
+	+border-radius(${1:bottom-left}px ${2:bottom-right}px ${3:top-left}px ${4:top-right}px)
+snippet bt
+	border-top: ${1:1}px ${2:solid} ${3:black}
+snippet br
+	border-right: ${1:1}px ${2:solid} ${3:black}
+snippet bb
+	border-bottom: ${1:1}px ${2:solid} ${3:black}
+snippet bl
+	border-left: ${1:1}px ${2:solid} ${3:black}
+snippet ba
+	border: ${1:1}px ${2:solid} ${3:black}
+snippet bn
+	border: none
+snippet b+
+	border:
+		top: ${1:1}px ${2:solid} ${3:black}
+		right: ${4:1}px ${5:solid} ${6:black}
+		bottom: ${7:1}px ${8:solid} ${9:black}
+		left: ${10:1}px ${11:solid} ${12:black}
+
+#
+# Special Interface Elements
+# -----------------------------------------------
+
+#
+# Commenting
+# -----------------------------------------------
+snippet head
+	/***********************
+		${1:Title}
+		**********************
+	${2}
+snippet sub
+	/**************
+		${1:Subtitle}
+		*************
+	${2}
+	@include partials/${1:file}
+
+#
+# Ucategorized stuff
+# -----------------------------------------------
+snippet bs
+	+box-shadow(rgba(${1:red},${2:green},${3:blue},${4:alpha}) ${5:x}px ${6:y}px ${7:blur}px ${8:spread} ${9:inset})
+snippet ts
+	+text-shadow(rgba(${1:red},${2:green},${3:blue},${4:alpha}) ${5:x}px ${6:y}px ${7:blur}px)
+snippet @e
+	@extend .${1:class}
+snippet v
+	visibility: ${1:hidden}
+snippet vc
+	visibility: collapse
+snippet vh
+	visibility: hidden
+snippet vv
+	visibility: visible
+
+#
+# IE Exceptions
+# -----------------------------------------------
+snippet ie
+	.ie7 &,
+	.ie8 &
+		${1}
+snippet ie6
+	.ie6 &,
+	.ie7 &,
+	.ie8 &
+		${1}
+snippet pie
+	.ie7 &,
+	.ie8 &
+		+pie
+snippet pie6
+	.ie6 &,
+	.ie7 &,
+	.ie8 &
+		+pie
