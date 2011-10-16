@@ -42,6 +42,10 @@ snippet font
 	font: ${1:1em/1.4em Verdana, Helvetica, sans-serif}; ${2}
 snippet ff
 	font-family: ${1:Verdana, Helverica, sans-serif}; ${2}
+snippet fs
+	font-size: ${1:1.4em}; ${2}
+snippet fw
+	font-weight: ${1:normal}; ${2}
 snippet ls
 	letter-spacing: ${1:0px}; ${2}
 snippet lh
@@ -82,7 +86,7 @@ snippet mb
 snippet ml
 	margin-left: ${1:20px}; ${2}
 #
-# Background
+# Background & Color
 # -----------------------------------------------
 snippet back
 	background: #${1:CCC}; ${2}
@@ -96,31 +100,33 @@ snippet backn
 	background: none; 
 snippet backin
 	background-image: none; 
+snippet c
+	color: ${1:#CCC}; ${2}
 #
 # Borders
 # -----------------------------------------------
 snippet border
-	border: ${1:1px} ${2:solid} ${3:#CCC}; ${2}
+	border: ${1:1px} ${2:solid} ${3:#CCC}; ${4}
 snippet bw
-	border-width: ${1:${2:1px} ${3:1px} ${4:1px} ${5:1px}}; ${2}
+	border-width: ${1:${2:1px} ${3:1px} ${4:1px} ${5:1px}}; ${4}
 snippet bc
-	border-color: ${1:1px} ${2:solid} ${3:#CCC}; ${2}
+	border-color: ${1:1px} ${2:solid} ${3:#CCC}; ${4}
 snippet bt
-	border-top: ${1:1px} ${2:solid} ${3:#CCC}; ${2}
+	border-top: ${1:1px} ${2:solid} ${3:#CCC}; ${4}
 snippet br
-	border-right: ${1:1px} ${2:solid} ${3:#CCC}; ${2}
+	border-right: ${1:1px} ${2:solid} ${3:#CCC}; ${4}
 snippet bb
-	border-bottom: ${1:1px} ${2:solid} ${3:#CCC}; ${2}
+	border-bottom: ${1:1px} ${2:solid} ${3:#CCC}; ${4}
 snippet bl
-	border-left: ${1:1px} ${2:solid} ${3:#CCC}; ${2}
+	border-left: ${1:1px} ${2:solid} ${3:#CCC}; ${4}
 snippet btc
-	border-top-color: ${1:1px} ${2:solid} ${3:#CCC}; ${2}
+	border-top-color: ${1:1px} ${2:solid} ${3:#CCC}; ${4}
 snippet brc
-	border-right-color: ${1:1px} ${2:solid} ${3:#CCC}; ${2}
+	border-right-color: ${1:1px} ${2:solid} ${3:#CCC}; ${4}
 snippet bbc
-	border-bottom-color: ${1:1px} ${2:solid} ${3:#CCC}; ${2}
+	border-bottom-color: ${1:1px} ${2:solid} ${3:#CCC}; ${4}
 snippet blc
-	border-left-color: ${1:1px} ${2:solid} ${3:#CCC}; ${2}
+	border-left-color: ${1:1px} ${2:solid} ${3:#CCC}; ${4}
 snippet bn
 	border: none;
 snippet btn
@@ -132,7 +138,7 @@ snippet bbn
 snippet bln
 	border-left: none; 
 #
-# Other stuff
+# Special Interface Elements
 # -----------------------------------------------
 snippet scrollbar
 	scrollbar-base-color:       ${1:#CCCCCC};${2:
@@ -143,7 +149,17 @@ snippet scrollbar
 	scrollbar-face-color:       ${7:#CCCCCC};
 	scrollbar-shadow-color:     ${9:#999999};
 	scrollbar-darkshadow-color: ${8:#666666};}
+#
+# Commenting
+# -----------------------------------------------
 snippet comment
 	/* --- $1 --------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+snippet banner
+	/*	---
+		--- ${1:Title}
+		---									--- */
+#
+# Ucategorized stuff
+# -----------------------------------------------
 snippet pointer
 	cursor: pointer;
